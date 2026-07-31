@@ -1,3 +1,4 @@
+Balance = 0
 while True:
   print("\n-----Personal Finance Tracker-----")
   print("1.Add Income")
@@ -6,10 +7,12 @@ while True:
   choice = input("Enter your choice: ")
   if choice == "1":
     income = float(input("Enter income:"))
-    print("Income Added:",Income)
+    balance += income
+    print("Current Balance:",balance)
   elif choice == "2":
     expense = float(input("Enter expense:")
-              print("Expense Added:",expense)
+    balance -= expense
+    print("Current Balance:",balance)
  elif choice == "3":
     print("Thank You!")
     break
